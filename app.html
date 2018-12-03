@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>AppChallenge Calculating Area</title>
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/css/mdb.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="container-fluid">
+<div class="col-md-12">
+    <h1>This app gives you the area of a rectangle</h1>
+
+    <p>What is your name?
+      <input id="guest" type="string">
+    </p>
+
+    <p>Enter the length:
+      <input id="firstNumber" type="string">
+    </p>
+
+    <p>Enter the width:
+      <input id="secondNumber" type="String">
+    </p>
+
+    <button id="clicker" class="btn btn-primary">Calculate</button>
+
+    <p id="result"></p>
+</div>
+  </main>
+
+  <script>
+    console.log("SCRIPT START")
+    console.log("Declare functions..............................")
+    function sub(x, y) {
+      return x * y
+    }
+    console.log("sub=" + sub)
+    console.log("Declare event listeners .......................")
+    document.addEventListener("dblclick", function () {
+      console.log("sub(a,b)=" +sub(a, b))
+    })
+    document.getElementById("clicker").addEventListener("click", function () {
+      const s = document.getElementById("guest").value
+      const i = parseInt(document.getElementById("firstNumber").value)
+      console.log("i=" + i)
+      const j = parseInt(document.getElementById("secondNumber").value)
+      console.log("j=" + j)
+      const ans = s + ", The area of the rectangle is " + sub(i, j) + "."
+      document.getElementById("result").innerHTML = ans
+    })
+    console.log("SCRIPT END")
+  </script>
+
+ 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+ 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.14/js/mdb.min.js"></script>
+</body>
+
+</html>
